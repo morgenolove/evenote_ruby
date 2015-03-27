@@ -1,5 +1,5 @@
 ruby 的异常处理
-
+所有的异常都是 Exception类的子类
 begin
 	可能会发生错误的处理
 	。。。
@@ -17,3 +17,43 @@ $!   最后发生的异常（对象）
 $@	 最后发生的异常的位置信息
 
 此外还会有以下信息
+方法名				意义
+class				异常的种类
+message			异常信息
+backrace		异常发生的位置
+详细看WC.rb
+
+后处理，不管是否发生异常都在最后执行
+begin
+	有可能发生异常处理
+rescue => 变量
+  发生异常后的处理
+ensure
+	不管是否发生异常都在最后执行
+end
+
+在rescue 下用retry，begin 以下的回再作一边
+
+表达式1 rescue 表达式2，等价于
+begin
+	表达式1
+rescue
+	表达式2
+end
+
+创建新的异常类
+MyError = Class.new(StandarError)
+MyError1 = Class.new(MyError)
+
+begin
+...
+rescue MyError
+end
+
+主动抛出异常，使用raise方法，可以使程序主动抛出异常。在基于自己的判断条件抛出异常，或者把捕捉到的异常调整后报出。
+
+raise message
+
+raise 异常类
+
+raise 异常类，message
