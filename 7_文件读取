@@ -1,0 +1,43 @@
+打开文件
+读取文件的文本数据
+输出文件的文本数据
+关闭文件
+
+如 read_tezt.rb
+filenmae = ARGV[0]
+file = File.open(filenmae)
+text = file.read
+print text
+file.close
+
+如果只是读文件用read方法更简单
+如read_text_simple.rb
+filename = ARGV[0]
+text = File.read(filename)
+print text
+
+一行代码搞定
+print File.read(ARGV[0])
+
+逐行读取文件内容,each_line方法
+filename = ARGV[0]
+file = File.open(filenmae)
+file.each_line do |line|
+  print line
+end
+file.close
+
+从文件中读取指定的内容并输出
+simple_grep.rb
+pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+file = File.open(filenmae)
+file.each_line do |line|
+	if pattern =~ line
+		print line
+	end
+end
+file.close
+
+Regexp.new(ARGV[0]) 表示吧字符串str装好为正则表达式对象

@@ -1,0 +1,47 @@
+ruby 有3中循环语句 for ，while，until
+3中循环方法 times，each，loop
+
+while语句
+
+while 循环条件 do
+	希望循环的处理
+end
+
+times方法
+循环次数如果确定，使用times方法更加简单
+
+循环测试.times do
+	希望循环的处理
+end
+times2.rb
+5.times do |i|
+	puts " #{i} times"
+end
+输出：
+ 0 times
+ 1 times
+ 2 times
+ 3 times
+ 4 times
+
+
+ for语句
+ for.rb
+
+
+each循环
+数组.each do |变量|
+	希望循环的处理
+end
+do 和end直接的部分叫block 块。each也叫带块的方法。把多个需要处理的内容合并后写到块里面。
+块的开始部分为|变量| ，each方法会把数组元素逐个拿出，赋值给指定|变量|，那么快里面的方法可以通过访问该变量，实现循环变量数组的操作。
+names = ["tony","jia","shell87","morgen"]
+
+names.each do |n|
+	puts "my name is #{n}"
+end
+输出
+my name is tony
+my name is jia
+my name is shell87
+my name is morgen

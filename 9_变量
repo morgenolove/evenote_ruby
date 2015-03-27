@@ -1,0 +1,95 @@
+局部变量 local variable
+全局变量 global variable
+实例变量 instance variable
+类变量 class variable
+常量	constant
+
+变量的命名方式决定变量种类
+局部变量	英文或_开头
+全局变量	以$开头
+实例变量	以@开头
+类变量		以@@开头
+常量		以大写英文字母开头
+
+查看scopetest.rb和sub.rb
+scopetest.rb
+$x = 0
+x = 0
+
+require "./sub"
+
+p $x
+p x
+
+sub.rb
+$x = 1 
+x =1
+
+运行scopetest.rb
+1
+0
+
+全局变量x被认为是相同的变量，是有关系，都是全局变量 都是叫x
+require sub后$x被更新了，古$x p后为1 
+
+删除scopetest.rb中x=0：
+$x = 0
+
+require "./sub"
+
+p $x
+p x
+
+sub.rb
+$x = 1 
+x =1
+运行后输出：
+1
+报错
+
+说明sub的局部变量x，在require后没有被映入到scopetest.rb中，总结出虽然2文件都有x变量，但是是局部变量，两者没有关系，属于不同的变量。
+
+
+常量就是定死的一个值，不能变.
+irb(main):017:0> T_ure = 0
+0
+irb(main):018:0> T_ure = 1
+(irb):18: warning: already initialized constant T_ure
+(irb):17: warning: previous definition of T_ure was here
+1
+命令行参数 ARGV就是常量
+
+多重赋值
+irb(main):001:0> a = 1
+=> 1
+irb(main):002:0> b =2
+=> 2
+irb(main):003:0> c = 3
+=> 3
+irb(main):004:0> a,b,c = 1,2,3
+=> [1, 2, 3]
+irb(main):005:0> p a
+1
+=> 1
+irb(main):006:0> p b
+2
+=> 2
+irb(main):007:0> p c
+3
+=> 3
+irb(main):008:0> a,b,*c = 1,2,3,4,5
+=> [1, 2, 3, 4, 5]
+irb(main):009:0> p c
+[3, 4, 5]
+=> [3, 4, 5]
+irb(main):010:0> p b
+2
+=> 2
+irb(main):011:0> p a
+1
+=> 1
+irb(main):012:0>
+
+
+
+

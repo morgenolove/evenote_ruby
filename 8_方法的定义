@@ -1,0 +1,14 @@
+
+def 方法名
+	希望执行的处理
+end
+
+def hello
+	puts "hi,ruby!"
+end
+
+执行
+hello()
+
+ruby 中使用require方法来引用库
+

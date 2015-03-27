@@ -1,0 +1,40 @@
+标示ID，用来标示对象同一性
+
+irb(main):001:0> ary1= []
+[]
+irb(main):002:0> ary2 = []
+[]
+irb(main):003:0> p ary1.object_id
+17860656
+17860656
+irb(main):004:0> p ary2.object_id
+17881248
+17881248
+p ary2.__id__
+17881248
+17881248
+
+equal? 方法判断两个对象是否同一个对象（id是否相同）
+irb(main):006:0> str1 = "foo"
+"foo"
+irb(main):007:0> str2 = str1
+"foo"
+irb(main):008:0> str3 = "f" + "o" + "o"
+"foo"
+irb(main):009:0> p str1.equal?(str2)
+true
+true
+irb(main):010:0> p str1.equal?(str3)
+false
+false
+
+==和eql? 区别
+irb(main):011:0> p 1.0
+1.0
+1.0
+irb(main):012:0> p 1.0 == 1
+true
+true
+irb(main):013:0> p 1.0.eql?(1)
+false
+false

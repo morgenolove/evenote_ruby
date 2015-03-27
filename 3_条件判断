@@ -1,0 +1,61 @@
+if语句
+
+if 条件 then
+	条件成立时执行的处理
+end
+
+成立 true
+不成立 false
+
+else关键字
+
+if 条件 then
+	条件成立时执行的处理
+else
+	条件不成立时执行的处理
+end
+
+if 条件1 then
+	条件成立时执行的处理
+elsif 条件2 then
+	条件2成立时执行的处理
+end
+
+
+条件判断上
+真	false，nil以外的所以对象
+假  false，nil
+在ruby中有个约定，返回真假值的方法都要以？结尾。
+
+逻辑运算符
+&& , ||,!    （对应and ，or ， not）
+条件1 && 条件2
+2个条件都真才返回真
+
+ 条件1 || 条件2
+ 一条件事真返回就是真
+
+! 条件
+取反
+
+
+unless 和if相反，如果条件是假 才执行处理。
+unless 条件 then
+	处理1
+else 
+	处理2
+end
+
+
+case 语句
+
+case 比较对象
+when 值1 then
+	处理1
+when 值2 then
+	处理2
+when 值3 then
+	处理3
+else 
+	处理4
+end

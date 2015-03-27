@@ -1,0 +1,16 @@
+ruby程序中 使用ARGV这个预定好数组来获取命令行传递的数据
+如：print_argv.rb
+puts "first argv : #{ARGV[0]}"
+puts "2 argv : #{ARGV[1]}"
+puts "3 argv : #{ARGV[2]}"
+输出
+D:\evenote_ruby\note\codes>ruby print_argv.rb 1st 2nd 3rd
+first argv : 1st
+2 argv : 2nd
+3 argv : 3rd
+
+如：happy_birth.rb
+name = ARGV[0]
+print "Happy Birthday, " , name ,"!\n"
+D:\evenote_ruby\note\codes>ruby happy_birth.rb tony
+Happy Birthday, tony!

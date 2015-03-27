@@ -1,0 +1,53 @@
+print
+例：
+print("Hello,Ruby.\n")
+
+"\" 后的字符串做特殊处理，转意
+print("Hello,\"Ruby\".\n")
+输出
+Hello,"Ruby".
+
+用单引号和双引号
+刚才的例子用单引号：
+print('Hello,\'Ruby\'.\n')
+输出
+Hello,'Ruby'.\n
+单引号没有实现转意，原封不动输出。但是也有例外，'Ruby'可以显示。
+要在字符串中再加一个“\”符合
+print('Hello,\\ \'Ruby\'.')
+输出
+Hello,\ 'Ruby'.
+总结但引号不能转意，但是可以转 “'(单引号)” ，"\"
+
+puts
+在输出结果的尾巴自动输出换行符
+puts "Hello,Ruby."
+当参数是两个字符串 会分别加上换行符
+puts "Hello,","Ruby."
+输出
+Hello,
+Ruby.
+
+
+p
+无论print，puts输出的数字1和字符串"1"，结果只是单纯的1。p方法不会对\n ,\t等特色字符转意
+p方法可以显示输出对象
+puts "100"
+p "100"
+p 100
+输出
+100
+"100"
+100
+如果要输出程序的结果，信息等可以选择print
+如果要确认程序的输出结果用p
+
+encoding
+输出中文前如果是windows系统请使用
+#! encoding: GBK
+
+
+pp方法
+pp 英语是pretty print的缩写
+
+p_and_pp.rb
